@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0C902029E523C800195E03 /* IBDesignable+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345D5905251F83910088CBEC /* IBDesignable+Localize.swift */; };
 		3433F2411C518AF7003AE34D /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3433F2361C518AF7003AE34D /* Localize_Swift.framework */; };
 		3433F2461C518AF7003AE34D /* Localize_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3433F2451C518AF7003AE34D /* Localize_SwiftTests.swift */; };
 		3433F2521C518B38003AE34D /* Localize_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 3433F2501C518B38003AE34D /* Localize_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -392,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68973D6C1DA7AB140076F08A /* String+LocalizedBundleTableName.swift in Sources */,
+				1A0C902029E523C800195E03 /* IBDesignable+Localize.swift in Sources */,
 				68973D671DA7AA200076F08A /* String+LocalizeBundle.swift in Sources */,
 				343A6DD11D1529560081AA37 /* Localize.swift in Sources */,
 				68A520051DA6D5FD00F43D9E /* String+LocalizeTableName.swift in Sources */,
@@ -565,8 +567,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roymarmelstein.Localize-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -587,7 +593,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roymarmelstein.Localize-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -626,7 +636,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roymarmelstein.Localize-Swift";
 				PRODUCT_NAME = Localize_Swift;
@@ -650,7 +660,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.roymarmelstein.Localize-Swift";
 				PRODUCT_NAME = Localize_Swift;
 				SDKROOT = macosx;

@@ -6,6 +6,60 @@
 //
 
 import Foundation
+#if os(macOS)
+import AppKit
+
+// MARK: - NSTextField localize Key extention for language in story board
+
+@IBDesignable public extension NSTextField {
+    @IBInspectable var localizeKey: String? {
+        set {
+            // set new value from dictionary
+            DispatchQueue.main.async {
+                self.stringValue = (newValue?.localized() ?? newValue) ?? ""
+            }
+        }
+        get {
+            return self.stringValue
+        }
+    }
+}
+
+// MARK: - NSButton localize Key extention for language in story board
+
+@IBDesignable public extension NSButton {
+    
+    @IBInspectable var localizeKey: String? {
+        set {
+            // set new value from dictionary
+            DispatchQueue.main.async {
+                self.title = (newValue?.localized() ?? newValue) ?? ""
+            }
+        }
+        get {
+            return self.title
+        }
+    }
+}
+
+// MARK: - NSTextView localize Key extention for language in story board
+
+@IBDesignable public extension NSTextView {
+    
+    @IBInspectable var localizeKey: String? {
+        set {
+            // set new value from dictionary
+            DispatchQueue.main.async {
+                self.string = (newValue?.localized() ?? newValue) ?? ""
+            }
+        }
+        get {
+            return self.string
+        }
+    }
+}
+
+#else
 import UIKit
 
 // MARK: - UILabel localize Key extention for language in story board
@@ -90,3 +144,5 @@ import UIKit
         }
     }
 }
+
+#endif
